@@ -6,13 +6,6 @@ public class Apple : MonoBehaviour
 {
     private int uniqueNum;
     public int UniquNum { get { return uniqueNum; } }
-    [SerializeField]
-    Text text;
-
-    private void Update()
-    {
-        text.text = uniqueNum.ToString();
-    }
 
     public void SetUniqueNum()
     {
