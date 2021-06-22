@@ -18,18 +18,23 @@ public class DragControl : MonoBehaviour
     [SerializeField]
     private GameObject dragSquare;
     private GameObject instatiatedDragSquare;
+    private bool isPlaying;
 
     private void Start()
     {
         instatiatedDragSquare = null;
+        isPlaying = false;
     }
 
     private void Update()
     {
-        DragInput();
-        if (isDragging)
+        if (isPlaying)
         {
-            SetDragSquare(instatiatedDragSquare, dragStart, MousePosition);
+            DragInput();
+            if (isDragging)
+            {
+                SetDragSquare(instatiatedDragSquare, dragStart, MousePosition);
+            }
         }
     }
 
@@ -47,7 +52,7 @@ public class DragControl : MonoBehaviour
 
     private void DragEnd()
     {
-        Destroy(instatiatedDragSquare);
+        instatiatedDragSquare.GetComponent<DragSquare>().DragEnd();
         instatiatedDragSquare = null;
     }
 
@@ -59,4 +64,13 @@ public class DragControl : MonoBehaviour
             DragEnd();
     }
 
+    public void GameStart()
+    {
+        isPlaying = true;
+    }
+
+    public void GameOver()
+    {
+        isPlaying = false;
+    }
 }

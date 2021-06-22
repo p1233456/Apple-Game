@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Apple
+    uniqueID: 1814830375
+    locked: 0
+  - name: Number
+    uniqueID: 1183378593
+    locked: 0
+  - name: UI
+    uniqueID: 3419133223
+    locked: 0
