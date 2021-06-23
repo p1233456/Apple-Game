@@ -836,7 +836,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3bba8327b5c644eaad8e45b508541a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteSpace: {x: 0.1, y: 0.1}
+  appleWhiteSpace: {x: 0.1, y: 0.1}
+  whiteSpace:
+    up: 0
+    down: 0
+    left: 0
+    right: 0
   applePrefab: {fileID: 1123745465392183885, guid: 1faafe88228e7354fa18eb174e9ac4fd,
     type: 3}
   row: 10
