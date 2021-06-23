@@ -838,16 +838,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appleWhiteSpace: {x: 0.1, y: 0.1}
   whiteSpace:
-    up: 0
-    down: 0
-    left: 0
-    right: 0
+    up: 1.4
+    down: 0.4
+    left: 0.4
+    right: 0.4
   applePrefab: {fileID: 1123745465392183885, guid: 1faafe88228e7354fa18eb174e9ac4fd,
     type: 3}
   row: 10
   column: 17
-  heightSpace: 1
-  widthSapce: 1
 --- !u!4 &1030133850
 Transform:
   m_ObjectHideFlags: 0

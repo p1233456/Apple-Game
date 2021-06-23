@@ -13,8 +13,6 @@ public class AppleMaking : MonoBehaviour
     private GameObject applePrefab;
     public int row;
     public int column;
-    public float heightSpace;
-    public float widthSapce;
     private GameObject MakeApple()
     {
         GameObject appleObject = Instantiate(applePrefab);
@@ -24,13 +22,13 @@ public class AppleMaking : MonoBehaviour
 
     public void Test()
     {
-        MakeAppleMap(row, column, heightSpace, widthSapce);
+        MakeAppleMap(row, column);
     }
 
-    public void MakeAppleMap(int row, int column, float heightSpace, float widthSpace)
+    public void MakeAppleMap(int row, int column)
     {
-        Vector2 leftUp = new Vector2(Camera.main.orthographicSize * Camera.main.aspect * -1f + widthSapce + whiteSpace.left, Camera.main.orthographicSize - heightSpace - whiteSpace.up);
-        Vector2 rightDown = new Vector2(Camera.main.orthographicSize * Camera.main.aspect - widthSapce - whiteSpace.right, Camera.main.orthographicSize * -1f + heightSpace + whiteSpace.down);
+        Vector2 leftUp = new Vector2(Camera.main.orthographicSize * Camera.main.aspect * -1f + whiteSpace.left, Camera.main.orthographicSize -  whiteSpace.up);
+        Vector2 rightDown = new Vector2(Camera.main.orthographicSize * Camera.main.aspect - whiteSpace.right, Camera.main.orthographicSize * -1f + whiteSpace.down);
 
         GameObject apple = null;
         Vector2 appleSize = new Vector2((rightDown.x - leftUp.x - appleWhiteSpace.x * (column - 1)) / column, (leftUp.y - rightDown.y - (row - 1) * appleWhiteSpace.y) / row);
