@@ -52,8 +52,15 @@ public class DragControl : MonoBehaviour
 
     private void DragEnd()
     {
-        instatiatedDragSquare.GetComponent<DragSquare>().DragEnd();
-        instatiatedDragSquare = null;
+        try
+        {
+            instatiatedDragSquare.GetComponent<DragSquare>().DragEnd();
+            instatiatedDragSquare = null;
+        }
+        catch
+        {
+
+        }
     }
 
     private void DragInput()
