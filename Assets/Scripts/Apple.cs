@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Apple : MonoBehaviour
 {
     private int uniqueNum;
-    public int UniquNum { get { return uniqueNum; } }
+    public int UniqueNum { get { return uniqueNum; } }
     [SerializeField]
     private List<GameObject> Numbers;
     [SerializeField]

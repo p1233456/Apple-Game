@@ -37,7 +37,7 @@ public class DragSquare : MonoBehaviour
         int tmp = 0;
         foreach(Apple apple in selectedApple)
         {
-            tmp += apple.UniquNum;
+            tmp += apple.UniqueNum;
         }
         if(tmp == 10)
         {

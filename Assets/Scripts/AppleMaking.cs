@@ -19,13 +19,12 @@ public class AppleMaking : MonoBehaviour
         return appleObject;
     }
 
-    public void Test()
+    public void MakeMap()
     {
-        //MakeAppleMap(row, column, leftUp, rightDown );
         MakeAppleMap(row, column, heightSpace, widthSapce);
     }
 
-    public void MakeAppleMap(int row, int column, float heightSpace, float widthSpace)
+    private void MakeAppleMap(int row, int column, float heightSpace, float widthSpace)
     {
         Vector2 leftUp = new Vector2(Camera.main.orthographicSize * Camera.main.aspect * -1f + widthSapce, Camera.main.orthographicSize - heightSpace);
         Vector2 rightDown = new Vector2(Camera.main.orthographicSize * Camera.main.aspect - widthSapce, Camera.main.orthographicSize * -1f + heightSpace);
